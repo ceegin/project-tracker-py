@@ -113,6 +113,18 @@ def handle_input():
             first_name, last_name, github = args   # unpack!
             make_new_student(first_name, last_name, github)
 
+        elif command == "assign_grade":
+            github, title, grade = args
+            assign_grade(github, title, grade)
+
+        elif command == "project":
+            title = args
+            get_project_by_title(title)
+
+        elif command == "grade":
+            github, title = args
+            get_grade_by_github_title(github, title)
+
         else:
             if command != "quit":
                 print "Invalid Entry. Try again."
